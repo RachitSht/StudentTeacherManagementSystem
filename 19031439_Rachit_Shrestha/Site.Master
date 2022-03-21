@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_19031439_Rachit_Shrestha.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="~/Stylesheet/StyleSheet1.css"> 
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <form runat="server">
+        <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <%--<span class="image">
+                    <img src="logo.png" alt="">
+                </span>--%>
+
+                <div class="text logo-text">
+                    <span class="name">Berkerley College</span>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Teacher">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Teachers</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Student">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">Students</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Student_Module">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">Student Module</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Module">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Module</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Address">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Address</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Fee">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">Fee</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Assignment">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="text nav-text">Assessment</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Add_Module_To_Teacher">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="text nav-text">Add Teacher Module</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Add_Student_Module">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="text nav-text">Add Student Module</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul>
+                    <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+                
+
+            </div>
+        </div>
+
+    </nav>
+        
+    <section class="home">
+
+        <div class="text">Dashboard Sidebar</div>
+
+        <div class="holder" >
+
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+        </form>
+
+</body>
+</html>
